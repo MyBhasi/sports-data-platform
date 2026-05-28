@@ -1,0 +1,22 @@
+environment: prod
+
+api:
+  base_url: "https://v3.football.api-sports.io"
+  rate_limit_per_minute: 10
+
+postgres:
+  host: ${POSTGRES_HOST}
+  port: 5432
+  db: sports_db
+
+kafka:
+  bootstrap_servers: ${KAFKA_BOOTSTRAP_SERVERS}
+
+cassandra:
+  hosts:
+    - ${CASSANDRA_HOSTS}
+  keyspace: sports_streaming
+
+spark:
+  master: spark://spark-master:7077
+  app_name: sports-platform-prod

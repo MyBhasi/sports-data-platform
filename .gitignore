@@ -1,0 +1,32 @@
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Data (raw files are not committed)
+data/bronze/
+data/silver/
+data/gold/
+logs/
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+
+# Spark
+derby.log
+metastore_db/
+
+# OS
+.DS_Store

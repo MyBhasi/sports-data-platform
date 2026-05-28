@@ -1,0 +1,32 @@
+# ── Weekend 1: Python + Football API + Bronze layer ──────────────────────────
+
+# API & HTTP
+requests==2.31.0
+
+# Config
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Testing
+pytest==7.4.4
+pytest-cov==4.1.0
+
+# ── Weekend 2+: uncomment as each weekend begins ──────────────────────────────
+
+# Weekend 2 – PySpark / Silver layer
+# pyspark==3.5.0
+# pandas==2.1.4
+
+# Weekend 3 – PostgreSQL / Gold layer
+# psycopg2-binary==2.9.9
+# sqlalchemy==2.0.23
+
+# Weekend 4 – Kafka + Cassandra streaming
+# kafka-python==2.0.2
+# cassandra-driver==3.29.0
+
+# Weekend 5 – Airflow orchestration
+# apache-airflow==2.8.0
+
+# Weekend 7 – GenAI integration
+# anthropic==0.40.0
