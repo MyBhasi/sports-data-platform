@@ -31,6 +31,9 @@ def flatten_fixtures(spark: SparkSession, bronze_path: str) -> DataFrame:
             F.col("match.score.fullTime.away").alias("full_time_away"),
             F.col("match.score.halfTime.home").alias("half_time_home"),
             F.col("match.score.halfTime.away").alias("half_time_away"),
+            F.expr("filter(match.referees, r -> r.type = 'REFEREE')[0].id").alias("referee_id"),
+            F.expr("filter(match.referees, r -> r.type = 'REFEREE')[0].name").alias("referee_name"),
+            F.expr("filter(match.referees, r -> r.type = 'REFEREE')[0].nationality").alias("referee_nationality"),
         )
         .withColumn("match_date", F.to_date("utc_date"))
         .withColumn("ingested_at", F.current_timestamp())

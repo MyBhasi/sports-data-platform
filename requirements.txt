@@ -18,8 +18,9 @@ pytest-cov==4.1.0
 # pandas==2.1.4
 
 # Weekend 3 – PostgreSQL / Gold layer
-# psycopg2-binary==2.9.9
-# sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.23
+pandas==2.1.4
 
 # Weekend 4 – Kafka + Cassandra streaming
 # kafka-python==2.0.2
@@ -31,3 +32,4 @@ pytest-cov==4.1.0
 # Weekend 7 – GenAI integration
 # anthropic==0.40.0
 pyspark==3.5.0
+setuptools>=68.0.0

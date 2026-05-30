@@ -10,37 +10,37 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./services/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
 
-  zookeeper:
-    image: confluentinc/cp-zookeeper:7.5.0
-    environment:
-      ZOOKEEPER_CLIENT_PORT: 2181
+  # Weekend 4 – Kafka + Cassandra streaming
+  # zookeeper:
+  #   image: confluentinc/cp-zookeeper:7.5.0
+  #   environment:
+  #     ZOOKEEPER_CLIENT_PORT: 2181
 
-  kafka:
-    image: confluentinc/cp-kafka:7.5.0
-    depends_on:
-      - zookeeper
-    ports:
-      - "9092:9092"
-    env_file: services/kafka/.env
+  # kafka:
+  #   image: confluentinc/cp-kafka:7.5.0
+  #   depends_on:
+  #     - zookeeper
+  #   ports:
+  #     - "9092:9092"
+  #   env_file: services/kafka/.env
 
-  cassandra:
-    image: cassandra:4.1
-    ports:
-      - "9042:9042"
-    env_file: services/cassandra/.env
-    volumes:
-      - cassandra_data:/var/lib/cassandra
+  # cassandra:
+  #   image: cassandra:4.1
+  #   ports:
+  #     - "9042:9042"
+  #   env_file: services/cassandra/.env
+  #   volumes:
+  #     - cassandra_data:/var/lib/cassandra
 
-  app:
-    build: ..
-    depends_on:
-      - postgres
-      - kafka
-      - cassandra
-    env_file: ../.env
-    volumes:
-      - ../data:/app/data
+  # Weekend 6 – Docker packaging (full app container)
+  # app:
+  #   build: ..
+  #   depends_on:
+  #     - postgres
+  #   env_file: ../.env
+  #   volumes:
+  #     - ../data:/app/data
 
 volumes:
   postgres_data:
-  cassandra_data:
+  # cassandra_data:
